@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"> 
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <p id="qty">Enter Value to be converted</p>
+                <h2 id="convert_qty"></h2>
+            </header>
+            <section>
+                <div class="row" style="margin-bottom: 30px;">
+                    <input type="number" class="input-space" placeholder="Enter value..." id="firstValue">
+                    <select name="" id="tempMenuOne" class="select-space" onchange="myConvert()"> 
+                        <option value="celcius">celcius</option>
+                        <option value="fahrenheit">fahrenheit</option>
+                        <option value="kelvin">kelvin</option>
+                    </select>
+                </div>
+                <div class="row">
+                        <input type="number" class="input-space"  placeholder="Enter value..." id="secondValue">
+                        <select name="" id="tempMenuTwo" class="select-space" onchange="converter()">
+                            <option value="celcius">celcius</option>
+                            <option value="fahrenheit">fahrenheit</option>
+                            <option value="kelvin">kelvin</option>
+                        </select>               
+            </section>
+
+        </div>
+
+    </body>
+</html>
