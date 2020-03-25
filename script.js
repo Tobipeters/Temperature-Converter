@@ -9,33 +9,39 @@ function myConvert() {
   console.log(selOne);
   console.log(selTwo);
   console.log(inputOne);
-  if (selTwo == 'celcius') {
 
-    var valueToConvert = document.getElementById('qty').innerHTML = inputTwo + 'degree Celcius equals';
+  //if 2nd select is celcius
+
+  if (selTwo == 'celcius') {
+    var valueToConvert = document.getElementById('qty').innerHTML = inputTwo + ' ' + 'degree Celcius equals';
     if (selOne == 'celcius') {
       var z = document.getElementById('secondValue').value;
       console.log(z)
-      
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + '' + 'degree Celcius';
+      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
       console.log(valueToConvert)
       console.log(convertedValue)
+      
     }
     else if (selOne == 'fahrenheit') {
       var x = parseInt(inputTwo, 10)
       var y = x * 9 / 5;
       var z = y + 32;
       console.log(z)
-     
+      
     }
     else if (selOne == 'kelvin') {
       var x = parseInt(inputTwo, 10)
       var y = 273
       var z = x + y
       console.log(z)
+      
     }
-  } else if (selTwo == 'fahrenheit') {
+  } 
+  
+  //if 2nd select is fahrenheit 
 
-    if (selOne == 'celcius') {
+  else if (selTwo == 'fahrenheit') {
+   if (selOne == 'celcius') {
       var x = parseInt(inputTwo, 10)
       var y = (x - 32)
       var z = y * (5 / 9)
@@ -53,8 +59,11 @@ function myConvert() {
       console.log(y);
       console.log(z);
     }
-  } else if (selTwo == 'kelvin') {
+  } 
+  
+  //if 2nd select is Kelvin
 
+  else if (selTwo == 'kelvin') {
     if (selOne == 'celcius') {
       var x = parseInt(inputTwo, 10)
       var y = x - 273
@@ -71,8 +80,9 @@ function myConvert() {
       console.log(inputTwo)
     }
   }
-
 }
+
+
 
 function converter() {
   var inputOne = document.getElementById('firstValue').value;
@@ -84,15 +94,19 @@ function converter() {
   console.log(selTwo);
   console.log(inputOne);
 
+  //if 1st select is celcius
+
   if (selOne == 'celcius') {
     var valueToConvert = document.getElementById('qty').innerHTML = inputOne + " " + 'degree Celcius equals';
 
     if (selTwo == 'celcius') {
       var inputOne = document.getElementById('firstValue').value;
-      var z = inputOne.toFixed(2);
+      // var y = inputOne
+      var z = inputOne;
       console.log(z)
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
       var inputTwo = document.getElementById('secondValue').value = inputOne ;
+      
     }
     else if (selTwo == 'fahrenheit') {
       var x = 18 / 10;
@@ -101,6 +115,7 @@ function converter() {
       console.log(z)
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
       var inputTwo = document.getElementById('secondValue').value = z ;
+      
     }
     else if (selTwo == 'kelvin') {
       var x = parseInt(inputOne, 10)
@@ -109,9 +124,14 @@ function converter() {
       console.log(z)
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
       var inputTwo = document.getElementById('secondValue').value = z ;
+      
     }
-  } else if (selOne == 'fahrenheit') {
+    
+  }
+  
+  //if 1st select is fahrenheit
 
+  else if (selOne == 'fahrenheit') {
     var valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Fahrenheit equals';
     if (selTwo == 'celcius') {
       var x = parseInt(inputOne, 10)
@@ -124,7 +144,8 @@ function converter() {
     }
     else if (selTwo == 'fahrenheit') {
       var inputOne = document.getElementById('firstValue').value;
-      var z = inputOne.toFixed(2)
+      // var y = inputOne;
+      var z = inputOne
       console.log(z)
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
       var inputTwo = document.getElementById('secondValue').value = z ;
@@ -138,8 +159,11 @@ function converter() {
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
       var inputTwo = document.getElementById('secondValue').value = z ;
     }
-  } else if (selOne == 'kelvin') {
+  } 
 
+  //if 1st select is kelvin
+  
+  else if (selOne == 'kelvin') {
     var valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Kelvin equals';
     if (selTwo == 'celcius') {
       var x = parseInt(inputOne, 10)
@@ -159,12 +183,13 @@ function converter() {
     }
     else if (selTwo == 'kelvin'){
       var inputOne = document.getElementById('firstValue').value;
-      var z = inputOne.toFixed(2);
+      // var y = inputOne
+      var z = inputOne;
       console.log(z)
       var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
       var inputTwo = document.getElementById('secondValue').value = inputOne ;
     }
   }
 
-
+return;
 }
