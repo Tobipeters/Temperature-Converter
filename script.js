@@ -1,195 +1,185 @@
-function myConvert() {
-  var inputOne = document.getElementById('firstValue').value;
-  var inputTwo = document.getElementById('secondValue').value;
-  var selOne = document.getElementById('tempMenuOne').value;
-  var selTwo = document.getElementById('tempMenuTwo').value;
-  // var valueToConvert = document.getElementById('qty').innerHTML;
-  // var convertedValue = document.getElementById('convert_qty').innerHTML;
+let x = 'celcius';
+let initialUnit = x;
+let  finalUnit = x ;
 
-  console.log(selOne);
-  console.log(selTwo);
-  console.log(inputOne);
+
+const myConvert = (option) => {
+ 
+  initialUnit = option.value;
+  let inputOne = document.getElementById('firstValue').value;
+  let inputTwo = document.getElementById('secondValue').value;
+  // let valueToConvert = document.getElementById('qty').innerHTML;
+  // let convertedValue = document.getElementById('convert_qty').innerHTML;
+  emptyInputError();
 
   //if 2nd select is celcius
 
-  if (selTwo == 'celcius') {
-    var valueToConvert = document.getElementById('qty').innerHTML = inputTwo + ' ' + 'degree Celcius equals';
-    if (selOne == 'celcius') {
-      var z = document.getElementById('secondValue').value;
+  if (finalUnit === 'celcius' && inputOne !== '') {
+  //   let valueToConvert = document.getElementById('qty').innerHTML = inputTwo + ' ' + 'degree Celcius equals';
+    if (initialUnit === 'celcius') {
+      let z = inputTwo;
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
-      console.log(valueToConvert)
-      console.log(convertedValue)
-      
+      inputOne = document.getElementById('firstValue').value = z;
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
     }
-    else if (selOne == 'fahrenheit') {
-      var x = parseInt(inputTwo, 10)
-      var y = x * 9 / 5;
-      var z = y + 32;
+    else if (initialUnit === 'fahrenheit') {
+      let x = parseInt(inputTwo, 10)
+      let y = x * 9 / 5;
+      let z = y + 32;
       console.log(z)
-      
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
-    else if (selOne == 'kelvin') {
-      var x = parseInt(inputTwo, 10)
-      var y = 273
-      var z = x + y
+    else if (initialUnit === 'kelvin') {
+      let x = parseInt(inputTwo, 10)
+      let y = 273
+      let z = x + y
       console.log(z)
-      
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
   } 
   
   //if 2nd select is fahrenheit 
 
-  else if (selTwo == 'fahrenheit') {
-   if (selOne == 'celcius') {
-      var x = parseInt(inputTwo, 10)
-      var y = (x - 32)
-      var z = y * (5 / 9)
-      console.log(y);
+  else if (finalUnit === 'fahrenheit') {
+   if (initialUnit === 'celcius') {
+      let x = parseInt(inputTwo, 10)
+      let y = (x - 32)
+      let z = y * (5 / 9)
       console.log(z);
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
-    else if (selOne == 'fahrenheit') {
-      var inputTwo = document.getElementById('secondValue').value;
-      console.log(inputTwo)
+    else if (initialUnit === 'fahrenheit') {
+      let z = document.getElementById('secondValue').value;
+      console.log(z)
+      inputOne = document.getElementById('firstValue').value =z;
     }
-    else if (selOne == 'kelvin') {
-      var x = parseInt(inputTwo, 10)
-      var y = (x - 32) * (5 / 9)
-      var z = y + 273
-      console.log(y);
+    else if (initialUnit === 'kelvin') {
+      let x = parseInt(inputTwo, 10)
+      let y = (x - 32) * (5 / 9)
+      let z = y + 273
       console.log(z);
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
   } 
   
   //if 2nd select is Kelvin
 
-  else if (selTwo == 'kelvin') {
-    if (selOne == 'celcius') {
-      var x = parseInt(inputTwo, 10)
-      var y = x - 273
-      console.log(y)
+  else if (finalUnit == 'kelvin') {
+    if (initialUnit == 'celcius') {
+      let x = parseInt(inputTwo, 10)
+      let z = x - 273
+      console.log(z)
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
-    else if (selOne == 'fahrenheit') {
-      var x = parseInt(inputTwo, 10)
-      var y = (x - 32) * (5 / 9)
-      var z = y + 273
+    else if (initialUnit == 'fahrenheit') {
+      inputTwo = document.getElementById('secondValue').value;
+      let x = parseInt(inputTwo, 10)
+      let y = (x - 32) * (5 / 9)
+      let z = y + 273
       console.log(z);
+      inputOne = document.getElementById('firstValue').value = z.toFixed(2);
     }
-    else if (selOne == 'kelvin') {
-      var inputTwo = document.getElementById('secondValue').value;
-      console.log(inputTwo)
+    else if (initialUnit == 'kelvin') {
+      let z = document.getElementById('secondValue').value;
+      console.log(z)
+      inputOne = document.getElementById('firstValue').value = z;
     }
   }
 }
 
 
 
-function converter() {
-  var inputOne = document.getElementById('firstValue').value;
-  var inputTwo = document.getElementById('secondValue').value;
-  var selOne = document.getElementById('tempMenuOne').value;
-  var selTwo = document.getElementById('tempMenuTwo').value;
-
-  console.log(selOne);
-  console.log(selTwo);
-  console.log(inputOne);
-
+const converter = (option) => { 
+  
+  finalUnit = option.value;
+  let inputOne = document.getElementById('firstValue').value;
+  emptyInputError();
   //if 1st select is celcius
 
-  if (selOne == 'celcius') {
-    var valueToConvert = document.getElementById('qty').innerHTML = inputOne + " " + 'degree Celcius equals';
+  if (initialUnit == 'celcius' && inputOne !== '') {
+    // let valueToConvert = document.getElementById('qty').innerHTML = inputOne + " " + 'degree Celcius equals';
 
-    if (selTwo == 'celcius') {
-      var inputOne = document.getElementById('firstValue').value;
-      // var y = inputOne
-      var z = inputOne;
+    if (finalUnit == 'celcius') {
+      let z = inputOne;
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
-      var inputTwo = document.getElementById('secondValue').value = inputOne ;
-      
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
+      inputTwo = document.getElementById('secondValue').value = z ;
     }
-    else if (selTwo == 'fahrenheit') {
-      var x = 18 / 10;
-      var y = (x * inputOne) + 32;
-      var z = y.toFixed(2);
+    else if (finalUnit == 'fahrenheit') {
+      let x = 18 / 10;
+      let z = (x * inputOne) + 32;
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
-      var inputTwo = document.getElementById('secondValue').value = z ;
-      
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
+      inputTwo = document.getElementById('secondValue').value = z.toFixed(2) ;
     }
-    else if (selTwo == 'kelvin') {
-      var x = parseInt(inputOne, 10)
-      var y = x + 273
-      var z = y.toFixed(2);
+    else if (finalUnit == 'kelvin') {
+      let x = parseInt(inputOne, 10)
+      let z = x + 273
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
-      var inputTwo = document.getElementById('secondValue').value = z ;
-      
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
+      inputTwo = document.getElementById('secondValue').value = z.toFixed(2) ;
     }
     
   }
   
   //if 1st select is fahrenheit
 
-  else if (selOne == 'fahrenheit') {
-    var valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Fahrenheit equals';
-    if (selTwo == 'celcius') {
-      var x = parseInt(inputOne, 10)
-      var y = (x - 32) * (5 / 9)
-      var z = y.toFixed(2)
-      console.log(y);
+  else if (initialUnit == 'fahrenheit') {
+    // let valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Fahrenheit equals';
+    if (finalUnit == 'celcius') {
+      let x = parseInt(inputOne, 10)
+      let z = (x - 32) * (5 / 9);
       console.log(z);
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
-      var inputTwo = document.getElementById('secondValue').value = z ;
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
+     inputTwo = document.getElementById('secondValue').value = z.toFixed(2) ;
     }
-    else if (selTwo == 'fahrenheit') {
-      var inputOne = document.getElementById('firstValue').value;
-      // var y = inputOne;
-      var z = inputOne
+    else if (finalUnit == 'fahrenheit') {
+      let z = document.getElementById('firstValue').value;
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
-      var inputTwo = document.getElementById('secondValue').value = z ;
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
+      inputTwo = document.getElementById('secondValue').value = z ;
     }
-    else if (selTwo == 'kelvin') {
-      var x = parseInt(inputOne, 10) - 32
-      var y = x* (5 / 9) + 273
-      var z = y.toFixed(2)
-      console.log(y);
-      console.log(z);
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
-      var inputTwo = document.getElementById('secondValue').value = z ;
+    else if (finalUnit == 'kelvin') {
+      let x = parseInt(inputOne, 10) - 32
+      let z = x* (5 / 9) + 273
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
+      inputTwo = document.getElementById('secondValue').value = z.toFixed(2);
     }
   } 
 
   //if 1st select is kelvin
   
-  else if (selOne == 'kelvin') {
-    var valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Kelvin equals';
-    if (selTwo == 'celcius') {
-      var x = parseInt(inputOne, 10)
-      var y = x - 273
-      var z = y.toFixed(2)
+  else if (initialUnit == 'kelvin') {
+    // let valueToConvert = document.getElementById('qty').innerHTML = inputOne + ' ' + 'degree Kelvin equals';
+    if (finalUnit == 'celcius') {
+      let x = parseInt(inputOne, 10)
+      let z = x - 273
       console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
-      var inputTwo = document.getElementById('secondValue').value = z ;
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Celcius';
+      inputTwo = document.getElementById('secondValue').value = z.toFixed(2) ;
     }
-    else if (selTwo == 'fahrenheit') {
-      var x = parseInt(inputOne, 10)- 32
-      var y = x * (5 / 9) + 273
-      var z = y.toFixed(2)
+    else if (finalUnit == 'fahrenheit') {
+      let x = parseInt(inputOne, 10)- 32
+      let z = x * (5 / 9) + 273;
       console.log(z);
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
-      var inputTwo = document.getElementById('secondValue').value = z ;
+      // let convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Fahrenheit';
+      inputTwo = document.getElementById('secondValue').value = z.toFixed(2) ;
     }
-    else if (selTwo == 'kelvin'){
-      var inputOne = document.getElementById('firstValue').value;
-      // var y = inputOne
-      var z = inputOne;
-      console.log(z)
-      var convertedValue = document.getElementById('convert_qty').innerHTML = z + ' ' + 'degree Kelvin';
-      var inputTwo = document.getElementById('secondValue').value = inputOne ;
+    else if (finalUnit == 'kelvin'){
+      let z = document.getElementById('firstValue').value;
+      console.log(z) 
+      inputTwo = document.getElementById('secondValue').value = z;
     }
   }
+}
 
-return;
+//||
+
+//Error pop if inpt fields are empty
+emptyInputError = () =>{
+  let inputOne = document.getElementById('firstValue').value;
+let inputTwo = document.getElementById('secondValue').value;  
+    if(inputOne === '' && inputTwo === '' ){
+   return alert('Input Field is empty, Enter a number to be converted')
+  }
 }

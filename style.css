@@ -20,7 +20,9 @@ body{
     padding: 0; 
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-
+    background: url('background.jpg') no-repeat;
+    /* background-position: center; */
+    background-size: cover;
 }
 .row{
     width: 100%;;

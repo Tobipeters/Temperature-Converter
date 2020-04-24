@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css"> 
         <script type="text/javascript" src="script.js"></script>
-    </head>
+    </head> 
     <body>
         <div class="container">
             <header>
@@ -14,8 +14,8 @@
             </header>
             <section>
                 <div class="row" style="margin-bottom: 30px;">
-                    <input type="number" class="input-space" placeholder="Enter value..." id="firstValue" onkeyup="myConvert()">
-                    <select name="" id="tempMenuOne" class="select-space" onchange="myConvert()"> 
+                    <input type="number" class="input-space" placeholder="Enter value..." id="firstValue">
+                    <select name="" id="select_one" class="select-space" onchange="myConvert(this)"> 
                         <option value="celcius">celcius</option>
                         <option value="fahrenheit">fahrenheit</option>
                         <option value="kelvin">kelvin</option>
@@ -23,8 +23,8 @@
                 </div>
                 <div class="row">
                         <input type="number" class="input-space"  placeholder="Enter value..." id="secondValue">
-                        <select name="" id="tempMenuTwo" class="select-space" onchange="converter()">
-                            <option value="celcius">celcius</option>
+                        <select name="" id="select_two" class="select-space" onchange="converter(this)">
+                            <option value="celcius" >celcius</option>
                             <option value="fahrenheit">fahrenheit</option>
                             <option value="kelvin">kelvin</option>
                         </select>               
