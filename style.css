@@ -83,10 +83,13 @@ dialog{
     margin: 0 auto;
     padding: 50px 30px;
 }
+a{
+    text-decoration: none;
+}
 
 @media screen and (max-width:600px){
     .container{
-        margin:30px auto 0;
+        margin:30px auto 200px;
         width: fit-content;
         /* padding: 20px; */
     }

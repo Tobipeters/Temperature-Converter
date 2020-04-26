@@ -1,4 +1,4 @@
-let x = 'celcius';
+let x = 'celsius';
 let initialUnit = x;
 let  finalUnit = x ;
 var inputOne = document.getElementById('firstValue');
@@ -11,10 +11,10 @@ const myConvert = (option) => {
   initialUnit = option.value;
   emptyInputError();
 
-  //if 2nd select is celcius
+  //if 2nd select is celsius
 
-  if (finalUnit === 'celcius' && inputOne !== '') {
-    if (initialUnit === 'celcius') {
+  if (finalUnit === 'celsius' && inputOne !== '') {
+    if (initialUnit === 'celsius') {
       let z = inputTwo;
       console.log(z)
       inputOne = document.getElementById('firstValue').value = z;
@@ -38,7 +38,7 @@ const myConvert = (option) => {
   //if 2nd select is fahrenheit 
 
   else if (finalUnit === 'fahrenheit') {
-   if (initialUnit === 'celcius') {
+   if (initialUnit === 'celsius') {
       let x = parseInt(inputTwo, 10)
       let y = (x - 32)
       let z = y * (5 / 9)
@@ -62,7 +62,7 @@ const myConvert = (option) => {
   //if 2nd select is Kelvin
 
   else if (finalUnit == 'kelvin') {
-    if (initialUnit == 'celcius') {
+    if (initialUnit == 'celsius') {
       let x = parseInt(inputTwo, 10)
       let z = x - 273
       console.log(z)
@@ -93,10 +93,10 @@ const converter = (option) => {
   
   finalUnit = option.value;
   emptyInputError();
-  //if 1st select is celcius
+  //if 1st select is celsius
 
-  if (initialUnit == 'celcius' && inputOne !== '') {
-    if (finalUnit == 'celcius') {
+  if (initialUnit == 'celsius' && inputOne !== '') {
+    if (finalUnit == 'celsius') {
       let z = inputOne;
       console.log(z)
       inputTwo = document.getElementById('secondValue').value = z ;
@@ -119,7 +119,7 @@ const converter = (option) => {
   //if 1st select is fahrenheit
 
   else if (initialUnit == 'fahrenheit') {
-    if (finalUnit == 'celcius') {
+    if (finalUnit == 'celsius') {
       let x = parseInt(inputOne, 10)
       let z = (x - 32) * (5 / 9);
       console.log(z);
@@ -140,7 +140,7 @@ const converter = (option) => {
   //if 1st select is kelvin
   
   else if (initialUnit == 'kelvin') {
-    if (finalUnit == 'celcius') {
+    if (finalUnit == 'celsius') {
       let x = parseInt(inputOne, 10)
       let z = x - 273
       console.log(z)
@@ -196,33 +196,33 @@ displayResult = () =>{
 
   if(inputOne !== '' && inputTwo !== '' ){
     enterValue.innerHTML = ''
-    if(selectOne == 'celcius'){
+    if(selectOne == 'celsius'){
       initialValue.innerHTML = `${inputOne}&deg;C =`
-      if(selectTwo === 'celcius'){
+      if(selectTwo === 'celsius'){
         result.innerHTML = `${inputTwo}&deg;C `;
       }else if(selectTwo === 'fahrenheit'){
         result.innerHTML = `${inputTwo}&deg;F`;
       }else if(selectTwo === 'kelvin'){
-        result.innerHTML = `${inputTwo}&deg;K`;
+        result.innerHTML = `${inputTwo}K`;
       }
     }else if (selectOne == 'fahrenheit'){
       initialValue.innerHTML = `${inputOne}&deg;F =`
-      if(selectTwo === 'celcius'){
+      if(selectTwo === 'celsius'){
         result.innerHTML = `${inputTwo}&deg;C`;
       }else if(selectTwo === 'fahrenheit'){
         result.innerHTML = `${inputTwo}&deg;F`;
       }else if(selectTwo === 'kelvin'){
-        result.innerHTML = `${inputTwo}&deg;K`;
+        result.innerHTML = `${inputTwo}K`;
       }
     }
     else if (selectOne == 'kelvin'){
-      initialValue.innerHTML = `${inputOne}&deg;K =`
-      if(selectTwo === 'celcius'){
+      initialValue.innerHTML = `${inputOne}K =`
+      if(selectTwo === 'celsius'){
         result.innerHTML = `${inputTwo}&deg;C`;
       }else if(selectTwo === 'fahrenheit'){
         result.innerHTML = `${inputTwo}&deg;F`;
       }else if(selectTwo === 'kelvin'){
-        result.innerHTML = `${inputTwo}&deg;K`;
+        result.innerHTML = `${inputTwo}K`;
       }
     }
   }
