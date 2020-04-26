@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Temperature Converter</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" type="text/css"> 
-        <script type="text/javascript" src="script.js"></script>
-    </head> 
-    <body>
-        <div class="container">
-            <header>
-                <p id="qty">Enter Value to be converted</p>
-                <h2 id="convert_qty"></h2>
-            </header>
-            <section>
-                <div class="row" style="margin-bottom: 30px;">
-                    <input type="number" class="input-space" placeholder="Enter value..." id="firstValue">
-                    <select name="" id="select_one" class="select-space" onchange="myConvert(this)"> 
-                        <option value="celcius">celcius</option>
-                        <option value="fahrenheit">fahrenheit</option>
-                        <option value="kelvin">kelvin</option>
-                    </select>
-                </div>
-                <div class="row">
-                        <input type="number" class="input-space"  placeholder="Enter value..." id="secondValue">
-                        <select name="" id="select_two" class="select-space" onchange="converter(this)">
-                            <option value="celcius" >celcius</option>
-                            <option value="fahrenheit">fahrenheit</option>
-                            <option value="kelvin">kelvin</option>
-                        </select>               
-            </section>
 
+<head>
+    <title>Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div style="float: right; height: 40px; padding: 10px 20px 0 0; ">
+          <a href="https://api.whatsapp.com/send?phone=+2348167764664"> <img src="images/whatsapp.png" alt="whatsapp" style="width: 25px;"> </a>
+         <a href="https://github.com/Tobipeters"> <img src="images/github.png" alt="github" style="width: 25px; padding-left:15px ;"> </a>
+       <a href="https://www.linkedin.com/in/oluwatobi-taiwo-b19860177"><img src="images/linkedin.png" alt="linkedin" style="width: 27px; padding-left:15px ;"> </a>
+       <a href="https://twitter.com/Peters_tsticks"> <img src="images/twitter.png" alt="twitter" style="width: 25px; padding-left:15px ;"> </a> 
+    </div>
+    <div>
+        <h2 class="app-title">Temperature Conversion App</h2>
+    </div>
+    <div class="container">
+        <header>
+            <p id="enter_value" >Enter Value to be converted</p>
+            <p class="result-cont">
+                <span id="no_input" class="ini_sent"> </span> 
+               <span id="result"  class="fin_sent"></span>
+            </p>
+        </header>
+        <section>
+            <div class="row" style="margin-bottom: 30px;">
+                <input type="number" class="input-space" placeholder="Enter value..." id="firstValue" >
+                <select name="" id="select_one" class="select-space" onchange="myConvert(this)" >
+                    <option value="celcius">celcius</option>
+                    <option value="fahrenheit">fahrenheit</option>
+                    <option value="kelvin">kelvin</option>
+                </select>
+            </div>
+            <div class="row">
+                <input type="number" class="input-space" placeholder="Enter value..." id="secondValue">
+                <select name="" id="select_two" class="select-space" onchange="converter(this)">
+                    <option value="celcius">celcius</option>
+                    <option value="fahrenheit">fahrenheit</option>
+                    <option value="kelvin">kelvin</option>
+                </select>
+        </section>
+
+    </div>
+    <dialog id="dialog_box">
+        <div>
+            <div>
+                <img src="images/close.png" alt="close" class="close_dialog" onclick="closeModal()">
+            </div>
+            <p class="dialog_text">
+
+                Oops! pls enter a numerical value to be converted in the input field
+            </p>
         </div>
+    </dialog>
 
-    </body>
+</body>
+
 </html>
