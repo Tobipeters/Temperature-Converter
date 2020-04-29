@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div style="float: right; height: 40px; padding: 10px 20px 0 0; ">
           <a href="https://api.whatsapp.com/send?phone=+2348167764664"> <img src="images/whatsapp.png" alt="whatsapp" style="width: 25px;"> </a>
          <a href="https://github.com/Tobipeters"> <img src="images/github.png" alt="github" style="width: 25px; padding-left:15px ;"> </a>
@@ -29,7 +30,7 @@
         </header>
         <section>
             <div class="row" style="margin-bottom: 30px;">
-                <input type="number" class="input-space" placeholder="Enter value..." id="firstValue" >
+                <input type="number" class="input-space" placeholder="Enter value..." id="firstValue" onkeyup="liveDisplayOne(event.target)">
                 <select name="" id="select_one" class="select-space" onclick="myConvert(this)"  onchange="myConvert(this)" >
                     <option value="celsius">Celsius</option>
                     <option value="fahrenheit">Fahrenheit</option>
@@ -37,7 +38,7 @@
                 </select>
             </div>
             <div class="row">
-                <input type="number" class="input-space" placeholder="Enter value..." id="secondValue">
+                <input type="number" class="input-space" placeholder="Enter value..." id="secondValue" onkeyup="liveDisplayTwo(event.target)">
                 <select name="" id="select_two" class="select-space" onclick="converter(this)" onchange="converter(this)">
                     <option value="celsius">Celsius</option>
                     <option value="fahrenheit">Fahrenheit</option>
@@ -48,11 +49,8 @@
     </div>
     <dialog id="dialog_box">
         <div>
-            <!-- <div> -->
-                <img src="images/close.png" alt="close" class="close_dialog" onclick="closeModal()">
-            <!-- </div> -->
+             <img src="images/close.png" alt="close" class="close_dialog" onclick="closeModal()">
             <p class="dialog_text">
-
                 Oops! pls enter a numerical value to be converted in the input field
             </p>
         </div>
