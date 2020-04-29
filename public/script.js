@@ -11,7 +11,7 @@ const myConvert = (option) => {
   inputOne = document.getElementById('firstValue').value;
   inputTwo = document.getElementById('secondValue').value;
   initialUnit = option.value;
-  emptyInputError();
+  // emptyInputError();
   //if 2nd select is celsius
   if (finalUnit === 'celsius' && inputOne !== '') {
     if (initialUnit === 'celsius') {
@@ -77,7 +77,7 @@ const myConvert = (option) => {
 converter = (option) => { 
   inputOne = document.getElementById('firstValue').value;
   finalUnit = option.value;
-  emptyInputError();
+  // emptyInputError();
   //if 1st select is celsius
   if (initialUnit == 'celsius' && inputOne !== '') {
     if (finalUnit == 'celsius') {
@@ -133,20 +133,28 @@ converter = (option) => {
 }
 //||
 //Error pop up if inpt fields are empty
-emptyInputError = () =>{
-  inputOne = document.getElementById('firstValue').value;
-  inputTwo = document.getElementById('secondValue').value; 
+// emptyInputError = () =>{
+//   inputOne = document.getElementById('firstValue').value;
+//   inputTwo = document.getElementById('secondValue').value; 
+//   let dialog = document.getElementById('dialog_box'); 
+//   let enterValue = document.getElementById('enter_value');
+//   let initialValue = document.getElementById('no_input');
+//   let result = document.getElementById('result');
+//     if(inputOne === '' && inputTwo === '' ){
+//      dialog.showModal();
+//      initialValue.innerHTML = '';
+//      result.innerHTML = '';
+//      enterValue.innerHTML = `Enter Value to be converted`
+//   }
+// }
+
+//notifier
+notify = () =>{
   let dialog = document.getElementById('dialog_box'); 
-  let enterValue = document.getElementById('enter_value');
-  let initialValue = document.getElementById('no_input');
-  let result = document.getElementById('result');
-    if(inputOne === '' && inputTwo === '' ){
-     dialog.showModal();
-     initialValue.innerHTML = '';
-     result.innerHTML = '';
-     enterValue.innerHTML = `Enter Value to be converted`
-  }
+  setTimeout( function () {dialog.showModal()}, 3000)
+
 }
+
 
 /////////closing modal function
 closeModal = () =>{

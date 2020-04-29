@@ -81,7 +81,7 @@ dialog{
 }
 .dialog_text{
     margin: 0 auto;
-    padding: 50px 30px;
+    padding: 10px 30px 20px
 }
 a{
     text-decoration: none;
@@ -109,10 +109,10 @@ a{
       height: 42px;
    }
     dialog{
-        margin: 0 30px;
+        margin: 0 auto;
     }
     .dialog_text{
-        margin: 0 auto;
-        padding: 30px 10px;
+        /* margin: 0 auto; */
+        /* padding: 30px 10px; */
     }
 }

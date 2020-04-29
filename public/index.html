@@ -5,11 +5,11 @@
     <title>Temperature Converter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script.js"></script>
 </head>
 
-<body>
+<body onload="notify()">
 
     <div style="float: right; height: 40px; padding: 10px 20px 0 0; ">
           <a href="https://api.whatsapp.com/send?phone=+2348167764664"> <img src="images/whatsapp.png" alt="whatsapp" style="width: 25px;"> </a>
@@ -48,12 +48,14 @@
 
     </div>
     <dialog id="dialog_box">
-        <div>
-             <img src="images/close.png" alt="close" class="close_dialog" onclick="closeModal()">
-            <p class="dialog_text">
-                Oops! pls enter a numerical value to be converted in the input field
+        <img src="images/close.png" alt="close" class="close_dialog" onclick="closeModal()">
+             <div style="text-align: center;"> 
+                    <img src="images/emoji.jpg" style="width: 60px; padding-top:30px;" alt="">
+            <p class="dialog_text">  
+                Live display now Integrated 
             </p>
         </div>
+      
     </dialog>
 
 </body>
